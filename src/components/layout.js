@@ -1,9 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import Typography from 'typography'
+import judahTheme from 'typography-theme-judah'
 
 import Header from "./header"
 import "./layout.css"
+
+const typography = new Typography(judahTheme)
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,9 +34,8 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          Built by <a href="https://github.com/was1paulina/latinrhythmladies">was1paulina</a> with {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://reactjs.org/">ReactJS</a>
           </footer>
         </div>
       </>

@@ -19,7 +19,7 @@ const Image = () => (
       query {
         iconImage: file(relativePath: { eq: "dance.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(maxWidth: 30) {
               ...GatsbyImageSharpFluid
             }
           }

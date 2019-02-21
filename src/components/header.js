@@ -1,6 +1,8 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import PropTypes from "prop-types"
+
+import { Link } from "gatsby"
+import Menu from "./menu"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -27,6 +29,15 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+    </div>
+    <div
+      style={{
+        textAlign: `right`,
+      }}
+    >
+      <h3 style={{ margin: 0 }}>
+        <Menu />
+      </h3>
     </div>
   </header>
 )
