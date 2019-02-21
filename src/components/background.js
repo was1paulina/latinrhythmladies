@@ -7,7 +7,7 @@ import BackgroundImage from 'gatsby-background-image'
 const BackgroundSection = ({ className }) => (
     <StaticQuery query={graphql`
       query {
-        desktop: file(relativePath: { eq: "hermes-rivera-255603-unsplash.jpg" }) {
+        desktop: file(relativePath: { eq: "coming.jpeg" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp

@@ -1,19 +1,16 @@
 import Typography from "typography"
-//import oceanBeachTheme from 'typography-theme-ocean-beach'
+import CodePlugin from 'typography-plugin-code'
+import themeJudah from "typography-theme-judah"
 
-const typography = new Typography({
-    baseFontSize: "18px",
-    baseLineHeight: 1.666,
-    headerFontFamily: [
-      "Avenir Next",
-      "Helvetica Neue",
-      "Segoe UI",
-      "Helvetica",
-      "Arial",
-      "sans-serif",
-    ],
-    bodyFontFamily: ["Georgia", "serif"],
-  }
-);
+themeJudah.plugins = [new CodePlugin()]
+
+const typography = new Typography(themeJudah);
+
+if (process.env.NODE_ENV !== 'production') {
+  typography.injectStyles()
+}
 
 export default typography;
+export const rhythm = typography.rhythm
+export const options = typography.options
+export const scale = typography.scale
